@@ -1,0 +1,106 @@
+$date
+	Sun Nov 03 12:51:09 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module register_16bit_tb $end
+$var wire 16 ! valueout [15:0] $end
+$var reg 1 " clock $end
+$var reg 8 # halfvaluein [7:0] $end
+$var reg 1 $ loadhigh $end
+$var reg 1 % loadlow $end
+$var reg 1 & reset $end
+$scope module dut $end
+$var wire 1 " clock $end
+$var wire 8 ' halfvaluein [7:0] $end
+$var wire 1 $ loadhigh $end
+$var wire 1 % loadlow $end
+$var wire 1 & reset $end
+$var reg 16 ( valueout [15:0] $end
+$upscope $end
+$scope task checkCount $end
+$var reg 16 ) expected [15:0] $end
+$var integer 32 * lineNum [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx *
+bx )
+bx (
+b11111111 '
+1&
+0%
+0$
+b11111111 #
+0"
+bx !
+$end
+#5000
+1"
+#10000
+b11111 *
+b0 )
+0&
+0"
+#15000
+b0 !
+b0 (
+1"
+#20000
+b100101 *
+1&
+0"
+#25000
+1"
+#30000
+b101011 *
+b1111111100000000 )
+1$
+0"
+#35000
+b1111111100000000 !
+b1111111100000000 (
+1"
+#40000
+b110010 *
+b11101110 #
+b11101110 '
+0$
+0"
+#45000
+1"
+#50000
+b111000 *
+b1111111111101110 )
+1%
+0"
+#55000
+b1111111111101110 !
+b1111111111101110 (
+1"
+#60000
+b111111 *
+0%
+0"
+#65000
+1"
+#70000
+b1000110 *
+b1110111011101110 )
+1%
+1$
+0"
+#75000
+b1110111011101110 !
+b1110111011101110 (
+1"
+#75500
