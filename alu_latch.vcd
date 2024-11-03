@@ -1,0 +1,153 @@
+$date
+	Sun Nov 03 15:12:35 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module alu_latch_tb $end
+$var wire 3 ! flags_out [2:0] $end
+$var wire 8 " data_out [7:0] $end
+$var reg 16 # alu_result [15:0] $end
+$var reg 1 $ clock $end
+$var reg 3 % flags_in [2:0] $end
+$var reg 1 & grab $end
+$var reg 1 ' reset $end
+$var reg 1 ( store_high $end
+$var reg 1 ) store_low $end
+$scope module alu_latch_dut $end
+$var wire 16 * alu_result [15:0] $end
+$var wire 1 $ clock $end
+$var wire 3 + flags_in [2:0] $end
+$var wire 1 & grab $end
+$var wire 1 ' reset $end
+$var wire 1 ( store_high $end
+$var wire 1 ) store_low $end
+$var reg 16 , alu_value [15:0] $end
+$var reg 8 - data_out [7:0] $end
+$var reg 3 . flags_out [2:0] $end
+$upscope $end
+$scope task checkCount $end
+$var reg 8 / data_expected [7:0] $end
+$var reg 3 0 flags_expected [2:0] $end
+$var integer 32 1 lineNum [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 1
+bx 0
+bx /
+bx .
+bx -
+bx ,
+bx +
+bx *
+x)
+x(
+1'
+x&
+bx %
+0$
+bx #
+bx "
+bx !
+$end
+#5000
+1$
+#10000
+b100101 1
+b0 0
+bz /
+0'
+0$
+#15000
+bz "
+bz -
+b0 !
+b0 .
+b0 ,
+1$
+#20000
+b101010 1
+1'
+0$
+#25000
+1$
+#30000
+b110001 1
+b101 0
+b101 %
+b101 +
+b1111111011101111 #
+b1111111011101111 *
+1&
+0$
+#35000
+b101 !
+b101 .
+b1111111011101111 ,
+1$
+#40000
+b111000 1
+b111 %
+b111 +
+b1110111111111110 #
+b1110111111111110 *
+0&
+0$
+#45000
+1$
+#50000
+b11111110 "
+b11111110 -
+b111101 1
+b11111110 /
+1(
+0$
+#55000
+1$
+#60000
+bz "
+bz -
+b1000010 1
+bz /
+0(
+0$
+#65000
+1$
+#70000
+b11101111 "
+b11101111 -
+b1000111 1
+b11101111 /
+1)
+0$
+#75000
+1$
+#80000
+bz "
+bz -
+b1001100 1
+bz /
+0)
+0$
+#85000
+1$
+#90000
+b11111110 "
+b11111110 -
+b1010010 1
+b11111110 /
+1)
+1(
+0$
+#95000
+1$
+#95500
