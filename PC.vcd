@@ -1,0 +1,77 @@
+$date
+	Sun Nov 03 12:31:31 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module program_counter_test $end
+$var wire 16 ! count [15:0] $end
+$var reg 1 " clock $end
+$var reg 1 # increment $end
+$var reg 1 $ jump_set $end
+$var reg 16 % jumpcount [15:0] $end
+$var reg 1 & reset $end
+$scope module dut $end
+$var wire 1 " clock $end
+$var wire 1 # increment $end
+$var wire 1 $ jump_set $end
+$var wire 16 ' jumpcount [15:0] $end
+$var wire 1 & reset $end
+$var reg 16 ( count [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx (
+b1111111111111110 '
+0&
+b1111111111111110 %
+0$
+0#
+0"
+bx !
+$end
+#5000
+b0 !
+b0 (
+1"
+#10000
+0"
+1&
+#15000
+1"
+#20000
+0"
+1#
+#25000
+b1 !
+b1 (
+1"
+#30000
+0"
+#35000
+b10 !
+b10 (
+1"
+#40000
+0"
+1$
+0#
+#45000
+b1111111111111110 !
+b1111111111111110 (
+1"
+#50000
+0"
+0$
+#55000
+1"
+#60000
+0"
