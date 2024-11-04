@@ -11,7 +11,7 @@ module rom#(action)(
 	
 );
 
-reg [7:0] mem[65535:0];
+	reg [7:0] mem[65535:0];  // 2^16
 
 always @(*) begin
 	if(wr_en && !rd_en && !rom_enable && action) begin		// Write into ROM only for simulation
