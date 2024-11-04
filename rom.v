@@ -3,7 +3,7 @@ parameter action = 1;			// simulation action = 1; synthesis action = 0;
 
 // ROM 32,768x8 bits
 module rom#(action)(
-	input wr_en,				// write_enable sent from memory controller; when wr_en = 1, 
+	input wr_en,				// write_enable sent from memory controller; when wr_en = 1, data is wriyyen if only action=1
 	input rd_en,				// read_enable sent from memory controller; when rd_en = 1, data is read from rom
 	input rom_enable,			// Rom enable sent from memory controller
 	inout [7:0]data_bus,
@@ -21,7 +21,7 @@ always @(*) begin
 
 end
 
-assign data_bus = (rd_en && !wr_en && !rom_enable) ? mem[address_bus] : 8'hzz;
+	assign data_bus = (rd_en && !wr_en && !rom_enable) ? mem[address_bus] : 8'hzz;  //Reading data
 
 
 endmodule
