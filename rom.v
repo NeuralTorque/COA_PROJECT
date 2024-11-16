@@ -14,14 +14,14 @@ module rom#(action)(
 	reg [7:0] mem[32767:0];  // 2^16
 
 always @(*) begin
-	if(wr_en && !rd_en && !rom_enable && action) begin		// Write into ROM only for simulation
+	if(wr_en && !rd_en && !rom_ram && action) begin		// Write into ROM only for simulation
 		mem[address_bus] = data_bus;
 	end
 	else begin end
 
 end
 
-	assign data_bus = (rd_en && !wr_en && !rom_enable) ? mem[address_bus] : 8'hzz;  //Reading data
+	assign data_bus = (rd_en && !wr_en && !rom_ram) ? mem[address_bus] : 8'hzz;  //Reading data
 
 
 endmodule
