@@ -3,15 +3,15 @@ parameter action = 1;			// simulation action = 1; synthesis action = 0;
 
 // ROM 32,768x8 bits
 module rom#(action)(
-	input wr_en,				// write_enable sent from memory controller; when wr_en = 1, data is wriyyen if only action=1
+	input wr_en,				// write_enable sent from memory controller; when wr_en = 1, data is written if only action=1
 	input rd_en,				// read_enable sent from memory controller; when rd_en = 1, data is read from rom
-	input rom_enable,			// Rom enable sent from memory controller
+	input rom_ram,			// Rom enable if it is 0
 	inout [7:0]data_bus,
 	input [15:0]address_bus
 	
 );
 
-	reg [7:0] mem[65535:0];  // 2^16
+	reg [7:0] mem[32767:0];  // 2^16
 
 always @(*) begin
 	if(wr_en && !rd_en && !rom_enable && action) begin		// Write into ROM only for simulation
