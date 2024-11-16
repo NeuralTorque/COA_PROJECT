@@ -7,7 +7,7 @@ module rom#(action)(
 	input rd_en,				// read_enable sent from memory controller; when rd_en = 1, data is read from rom
 	input rom_ram,			// Rom enable if it is 0
 	inout [7:0]data_bus,
-	input [15:0]address_bus
+	input [14:0]address_bus
 	
 );
 
